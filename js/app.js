@@ -311,9 +311,9 @@ function showNotification(message, type = 'info') {
 
     // Set background color based on type
     const colors = {
-        success: '#10b981',
+        success: '#5eead4',
         error: '#ef4444',
-        info: '#6366f1',
+        info: '#14B8A6',
         warning: '#f59e0b'
     };
     notification.style.background = colors[type] || colors.info;
@@ -451,6 +451,6 @@ document.addEventListener('keydown', function(e) {
 });
 
 console.log('%c DevSpace %c Developer Workspace v1.0 ',
-    'background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%); color: white; padding: 5px 10px; border-radius: 3px 0 0 3px;',
-    'background: #1a1d26; color: #9ca3af; padding: 5px 10px; border-radius: 0 3px 3px 0;'
+    'background: linear-gradient(135deg, #14B8A6 0%, #5eead4 100%); color: white; padding: 5px 10px; border-radius: 3px 0 0 3px;',
+    'background: #1a1a1a; color: #9ca3af; padding: 5px 10px; border-radius: 0 3px 3px 0;'
 );

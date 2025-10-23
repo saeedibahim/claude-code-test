@@ -10,40 +10,46 @@
 
 :root {
     /* Dark Mode Colors */
-    --bg-primary: #0a0b0f;
-    --bg-secondary: #12141a;
-    --bg-tertiary: #1a1d26;
-    --bg-hover: #20232e;
+    --bg-primary: #000000;
+    --bg-secondary: #0a0a0a;
+    --bg-tertiary: #1a1a1a;
+    --bg-hover: #1f2937;
 
     /* Surface Colors */
-    --surface-primary: #1a1d26;
-    --surface-secondary: #20232e;
-    --surface-tertiary: #282c38;
+    --surface-primary: #1a1a1a;
+    --surface-secondary: #1f2937;
+    --surface-tertiary: #374151;
 
     /* Text Colors */
-    --text-primary: #e8eaed;
-    --text-secondary: #9ca3af;
-    --text-tertiary: #6b7280;
+    --text-primary: #ffffff;
+    --text-secondary: #e5e7eb;
+    --text-tertiary: #d1d5db;
+    --text-muted: #9ca3af;
+    --text-dark: #6b7280;
 
-    /* Brand Colors */
-    --brand-primary: #6366f1;
-    --brand-secondary: #8b5cf6;
-    --brand-gradient: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+    /* Brand Colors - Teal/Green Theme */
+    --brand-primary: #14B8A6;
+    --brand-secondary: #5eead4;
+    --brand-gradient: linear-gradient(135deg, #14B8A6 0%, #5eead4 100%);
+    --brand-glow: rgba(20, 184, 166, 0.3);
 
     /* Accent Colors */
-    --accent-purple: #8b5cf6;
+    --accent-teal: #14B8A6;
+    --accent-teal-light: #5eead4;
     --accent-blue: #3b82f6;
     --accent-green: #10b981;
     --accent-orange: #f59e0b;
     --accent-red: #ef4444;
 
     /* Border & Shadow */
-    --border-color: #282c38;
-    --border-light: #323844;
-    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
-    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.4), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
-    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.5), 0 4px 6px -2px rgba(0, 0, 0, 0.4);
-    --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.6), 0 10px 10px -5px rgba(0, 0, 0, 0.5);
+    --border-color: rgba(55, 65, 81, 0.5);
+    --border-light: rgba(55, 65, 81, 0.7);
+    --border-teal: rgba(20, 184, 166, 0.2);
+    --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.5);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.6), 0 2px 4px -1px rgba(0, 0, 0, 0.5);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.7), 0 4px 6px -2px rgba(0, 0, 0, 0.6);
+    --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.8), 0 10px 10px -5px rgba(0, 0, 0, 0.7);
+    --shadow-teal: 0 0 20px rgba(20, 184, 166, 0.3);
 
     /* Spacing */
     --spacing-xs: 0.25rem;
@@ -96,8 +102,8 @@ a:hover {
     padding: var(--spacing-lg);
     background: var(--bg-primary);
     background-image:
-        radial-gradient(at 0% 0%, rgba(99, 102, 241, 0.15) 0px, transparent 50%),
-        radial-gradient(at 100% 100%, rgba(139, 92, 246, 0.15) 0px, transparent 50%);
+        radial-gradient(at 0% 0%, rgba(20, 184, 166, 0.15) 0px, transparent 50%),
+        radial-gradient(at 100% 100%, rgba(94, 234, 212, 0.1) 0px, transparent 50%);
 }
 
 .login-container {
@@ -232,12 +238,12 @@ a:hover {
     font-size: 0.95rem;
     cursor: pointer;
     transition: all var(--transition-base);
-    box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
+    box-shadow: 0 4px 12px var(--brand-glow);
 }
 
 .btn-primary:hover {
     transform: translateY(-1px);
-    box-shadow: 0 6px 16px rgba(99, 102, 241, 0.4);
+    box-shadow: 0 6px 20px var(--brand-glow), 0 0 30px rgba(20, 184, 166, 0.2);
 }
 
 .btn-primary:active {
@@ -318,7 +324,7 @@ a:hover {
     right: -50%;
     width: 100%;
     height: 100%;
-    background: radial-gradient(circle, rgba(99, 102, 241, 0.1) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(20, 184, 166, 0.1) 0%, transparent 70%);
 }
 
 .feature-showcase {
@@ -576,8 +582,8 @@ a:hover {
 }
 
 .stat-icon.purple {
-    background: rgba(139, 92, 246, 0.15);
-    color: var(--accent-purple);
+    background: rgba(20, 184, 166, 0.15);
+    color: var(--accent-teal);
 }
 
 .stat-icon.blue {
@@ -725,8 +731,8 @@ a:hover {
 }
 
 .project-status.planning {
-    background: rgba(139, 92, 246, 0.15);
-    color: var(--accent-purple);
+    background: rgba(20, 184, 166, 0.15);
+    color: var(--accent-teal);
 }
 
 .project-team {
@@ -841,7 +847,7 @@ a:hover {
 }
 
 .activity-icon.commit {
-    background: rgba(99, 102, 241, 0.15);
+    background: rgba(20, 184, 166, 0.15);
     color: var(--brand-primary);
 }
 
@@ -861,8 +867,8 @@ a:hover {
 }
 
 .activity-icon.deploy {
-    background: rgba(139, 92, 246, 0.15);
-    color: var(--accent-purple);
+    background: rgba(94, 234, 212, 0.15);
+    color: var(--accent-teal-light);
 }
 
 .team-list {
